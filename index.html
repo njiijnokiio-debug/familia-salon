@@ -3,142 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Familia — Салон красоты</title>
-    <meta name="description" content="Familia — салон красоты в Котельниках. Маникюр, педикюр, стрижки, окрашивание.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Beauty Studio — Салон красоты</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <header class="header" id="header">
-        <div class="header__inner">
-            <a href="#" class="logo">Familia</a>
-            <nav class="nav" id="nav">
-                <a href="#about" class="nav__link">О нас</a>
-                <a href="#services" class="nav__link">Услуги</a>
-                <a href="#masters" class="nav__link">Мастера</a>
-                <a href="#reviews" class="nav__link">Отзывы</a>
-                <a href="#contacts" class="nav__link">Контакты</a>
-            </nav>
-            <a href="tel:+74999610545" class="header__phone">8 (499) 961-05-45</a>
-            <button class="burger" id="burger" aria-label="Меню">
-                <span></span><span></span>
-            </button>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo">
+                    <span class="logo__text">Beauty Studio</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="#salons">Салоны</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#prices">Цены</a></li>
+                        <li><a href="#masters">Мастера</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__contacts">
+                    <a href="tel:+74991234567" class="header__phone">+7 499 123-45-67</a>
+                    <div class="header__social">
+                        <a href="#" class="social-link">Telegram</a>
+                        <a href="#" class="social-link">WhatsApp</a>
+                    </div>
+                </div>
+                <button class="burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="hero__bg">
-                <img src="assets/hero.svg" alt="" class="hero__img">
-            </div>
-            <div class="hero__content">
-                <p class="hero__location">Котельники · Сосновая ул., 1к3</p>
-                <h1 class="hero__title">
-                    <span class="hero__line">Красота</span>
-                    <span class="hero__line hero__line--italic">начинается</span>
-                    <span class="hero__line">с заботы</span>
-                </h1>
-                <p class="hero__subtitle">Маникюр · Педикюр · Стрижки · Окрашивание</p>
-                <a href="#booking" class="hero__cta">
-                    <span>Записаться</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-            </div>
-            <div class="hero__scroll">
-                <div class="hero__scroll-text">scroll</div>
-                <div class="hero__scroll-line"></div>
-            </div>
-        </section>
-
-        <section class="about" id="about">
             <div class="container">
-                <div class="about__layout">
-                    <div class="about__left">
-                        <p class="about__number">01</p>
-                        <h2 class="about__title">Место, где<br>вы — <em>главная</em><br>героиня</h2>
-                    </div>
-                    <div class="about__right">
-                        <p class="about__text">Familia — не просто салон красоты. Это пространство, созданное для того, чтобы вы чувствовали себя уверенно и красиво. Каждый визит — как встреча с другом, который знает, что вам нужно.</p>
-                        <p class="about__text">Наши мастера — профессионалы с многолетним опытом. Мы следим за трендами, используем качественные материалы и не экономим на стерильности.</p>
-                        <div class="about__stats">
-                            <div class="stat">
-                                <span class="stat__number">5+</span>
-                                <span class="stat__label">лет работы</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat__number">1000+</span>
-                                <span class="stat__label">довольных гостей</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat__number">2</span>
-                                <span class="stat__label">топ-мастера</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hero__content">
+                    <h1 class="hero__title">Салон красоты<br>Beauty Studio</h1>
+                    <p class="hero__subtitle">Ваша красота — наша миссия. Мы внимательно относимся к каждому клиенту, обеспечивая высокое качество услуг и индивидуальный подход</p>
+                    <a href="#booking" class="btn btn--primary">Записаться</a>
                 </div>
             </div>
         </section>
 
         <section class="services" id="services">
             <div class="container">
-                <div class="services__header">
-                    <p class="services__number">02</p>
-                    <h2 class="services__title">Услуги</h2>
+                <h2 class="section-title">Услуги</h2>
+                <p class="section-subtitle">Всего категорий: 6</p>
+                <div class="services__grid">
+                    <div class="service-card">
+                        <div class="service-card__image">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=500&fit=crop" alt="Парикмахерский зал">
+                        </div>
+                        <h3 class="service-card__title">Парикмахерский зал</h3>
+                        <ul class="service-card__list">
+                            <li>Мелирование волос</li>
+                            <li>Окрашивание волос</li>
+                            <li>Стрижка волос</li>
+                            <li>Прически и укладки</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__image">
+                            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=500&fit=crop" alt="Маникюр и педикюр">
+                        </div>
+                        <h3 class="service-card__title">Маникюр и педикюр</h3>
+                        <ul class="service-card__list">
+                            <li>Услуги маникюра</li>
+                            <li>Виды педикюра</li>
+                            <li>Наращивание ногтей</li>
+                            <li>Покрытия для ногтей</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__image">
+                            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=500&fit=crop" alt="Визаж">
+                        </div>
+                        <h3 class="service-card__title">Визаж</h3>
+                        <ul class="service-card__list">
+                            <li>Брови и ресницы</li>
+                            <li>Макияж</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__image">
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=500&fit=crop" alt="Косметология">
+                        </div>
+                        <h3 class="service-card__title">Косметология</h3>
+                        <ul class="service-card__list">
+                            <li>Эстетическая косметология</li>
+                            <li>Аппаратная косметология</li>
+                            <li>Инъекционная косметология</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__image">
+                            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=500&fit=crop" alt="Массаж">
+                        </div>
+                        <h3 class="service-card__title">Массаж</h3>
+                        <ul class="service-card__list">
+                            <li>Массаж для тела</li>
+                            <li>Прессотерапия</li>
+                            <li>Обёртывания</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__image">
+                            <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=400&h=500&fit=crop" alt="Услуги на дому">
+                        </div>
+                        <h3 class="service-card__title">Услуги на дому</h3>
+                        <ul class="service-card__list">
+                            <li>Парикмахерские услуги</li>
+                            <li>Ногтевой сервис</li>
+                            <li>Визаж</li>
+                            <li>Массаж</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="services__list">
-                    <div class="service-item">
-                        <div class="service-item__header">
-                            <span class="service-item__num">/01</span>
-                            <h3>Маникюр</h3>
-                            <span class="service-item__price">от 1 500 ₽</span>
+            </div>
+        </section>
+
+        <section class="advantages" id="about">
+            <div class="container">
+                <h2 class="section-title">Преимущества</h2>
+                <p class="section-subtitle">Мы создаем атмосферу уюта и заботы</p>
+                <div class="advantages__grid">
+                    <div class="advantage-card">
+                        <div class="advantage-card__image">
+                            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=400&h=300&fit=crop" alt="Стиль">
                         </div>
-                        <p class="service-item__desc">Классический, аппаратный, комбинированный. Покрытие гель-лаком — стойкость до 4 недель.</p>
+                        <h3 class="advantage-card__title">Стиль</h3>
+                        <p class="advantage-card__text">Подчеркиваем вашу индивидуальность и красоту</p>
                     </div>
-                    <div class="service-item">
-                        <div class="service-item__header">
-                            <span class="service-item__num">/02</span>
-                            <h3>Педикюр</h3>
-                            <span class="service-item__price">от 2 000 ₽</span>
+                    <div class="advantage-card">
+                        <div class="advantage-card__image">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop" alt="Интерьер">
                         </div>
-                        <p class="service-item__desc">Аппаратный и комбинированный педикюр с покрытием. Здоровые и ухоженные стопы круглый год.</p>
+                        <h3 class="advantage-card__title">Интерьер</h3>
+                        <p class="advantage-card__text">Уютные и элегантные пространства</p>
                     </div>
-                    <div class="service-item">
-                        <div class="service-item__header">
-                            <span class="service-item__num">/03</span>
-                            <h3>Стрижки</h3>
-                            <span class="service-item__price">от 1 200 ₽</span>
+                    <div class="advantage-card">
+                        <div class="advantage-card__image">
+                            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&h=300&fit=crop" alt="Мастера">
                         </div>
-                        <p class="service-item__desc">Женские, мужские и детские стрижки. Консультация по подбору формы и ухода.</p>
+                        <h3 class="advantage-card__title">Мастера</h3>
+                        <p class="advantage-card__text">Профессионалы своего дела</p>
                     </div>
-                    <div class="service-item">
-                        <div class="service-item__header">
-                            <span class="service-item__num">/04</span>
-                            <h3>Окрашивание</h3>
-                            <span class="service-item__price">от 2 500 ₽</span>
+                    <div class="advantage-card">
+                        <div class="advantage-card__image">
+                            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&h=300&fit=crop" alt="Опыт">
                         </div>
-                        <p class="service-item__desc">Однотонное, балаяж, шатуш, мелирование. Бережные составы без аммиака.</p>
+                        <h3 class="advantage-card__title">10+ лет опыта</h3>
+                        <p class="advantage-card__text">Богатый опыт в сфере красоты</p>
                     </div>
-                    <div class="service-item">
-                        <div class="service-item__header">
-                            <span class="service-item__num">/05</span>
-                            <h3>Укладки</h3>
-                            <span class="service-item__price">от 1 800 ₽</span>
+                    <div class="advantage-card">
+                        <div class="advantage-card__image">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop" alt="Филиалы">
                         </div>
-                        <p class="service-item__desc">Вечерние и свадебные укладки, локоны, гладкие причёски на любой случай.</p>
+                        <h3 class="advantage-card__title">5 филиалов</h3>
+                        <p class="advantage-card__text">Удобное расположение по всему городу</p>
                     </div>
-                    <div class="service-item">
-                        <div class="service-item__header">
-                            <span class="service-item__num">/06</span>
-                            <h3>Уход за волосами</h3>
-                            <span class="service-item__price">от 1 000 ₽</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="salons" id="salons">
+            <div class="container">
+                <h2 class="section-title">Салоны</h2>
+                <p class="section-subtitle">Всего: 5</p>
+                <div class="salons__grid">
+                    <div class="salon-card">
+                        <div class="salon-card__image">
+                            <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&h=300&fit=crop" alt="Центр">
                         </div>
-                        <p class="service-item__desc">Восстановительные процедуры, ботокс для волос, кератиновое выпрямление.</p>
+                        <h3 class="salon-card__title">Центр</h3>
+                        <p class="salon-card__address">ул. Примерная, д. 1</p>
+                    </div>
+                    <div class="salon-card">
+                        <div class="salon-card__image">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop" alt="Север">
+                        </div>
+                        <h3 class="salon-card__title">Север</h3>
+                        <p class="salon-card__address">пр. Северный, д. 10</p>
+                    </div>
+                    <div class="salon-card">
+                        <div class="salon-card__image">
+                            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=400&h=300&fit=crop" alt="Юг">
+                        </div>
+                        <h3 class="salon-card__title">Юг</h3>
+                        <p class="salon-card__address">ул. Южная, д. 20</p>
+                    </div>
+                    <div class="salon-card">
+                        <div class="salon-card__image">
+                            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&h=300&fit=crop" alt="Восток">
+                        </div>
+                        <h3 class="salon-card__title">Восток</h3>
+                        <p class="salon-card__address">ул. Восточная, д. 30</p>
+                    </div>
+                    <div class="salon-card">
+                        <div class="salon-card__image">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop" alt="Запад">
+                        </div>
+                        <h3 class="salon-card__title">Запад</h3>
+                        <p class="salon-card__address">ул. Западная, д. 40</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <div class="container">
+                <h2 class="section-title">Отзывы</h2>
+                <div class="reviews__slider">
+                    <div class="review-card">
+                        <div class="review-card__header">
+                            <div class="review-card__avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Анна">
+                            </div>
+                            <div class="review-card__info">
+                                <h4 class="review-card__name">Анна</h4>
+                                <span class="review-card__date">15.09.2024</span>
+                            </div>
+                        </div>
+                        <p class="review-card__text">Прекрасный салон! Очень внимательные мастера, всегда подскажут и помогут. Рекомендую!</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card__header">
+                            <div class="review-card__avatar">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Мария">
+                            </div>
+                            <div class="review-card__info">
+                                <h4 class="review-card__name">Мария</h4>
+                                <span class="review-card__date">10.09.2024</span>
+                            </div>
+                        </div>
+                        <p class="review-card__text">Лучший салон в городе! Всегда идеальный результат и приятная атмосфера.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card__header">
+                            <div class="review-card__avatar">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="Елена">
+                            </div>
+                            <div class="review-card__info">
+                                <h4 class="review-card__name">Елена</h4>
+                                <span class="review-card__date">05.09.2024</span>
+                            </div>
+                        </div>
+                        <p class="review-card__text">Хожу сюда уже год и ни разу не разочаровалась. Спасибо мастерам!</p>
                     </div>
                 </div>
             </div>
@@ -146,64 +262,67 @@
 
         <section class="masters" id="masters">
             <div class="container">
-                <div class="masters__header">
-                    <p class="masters__number">03</p>
-                    <h2 class="masters__title">Мастера</h2>
-                </div>
+                <h2 class="section-title">Мастера</h2>
                 <div class="masters__grid">
-                    <div class="master">
-                        <div class="master__photo master__photo--1"></div>
-                        <div class="master__info">
-                            <h3>Наталья</h3>
-                            <p class="master__role">Мастер маникюра и педикюра</p>
-                            <p class="master__desc">Внимательный и доброжелательный мастер. Идеальное покрытие и аккуратная работа с кутикулой.</p>
+                    <div class="master-card">
+                        <div class="master-card__image">
+                            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=300&h=400&fit=crop" alt="Анна Иванова">
                         </div>
+                        <h3 class="master-card__name">Анна Иванова</h3>
+                        <p class="master-card__position">Топ-стилист</p>
                     </div>
-                    <div class="master">
-                        <div class="master__photo master__photo--2"></div>
-                        <div class="master__info">
-                            <h3>Стася Балашова</h3>
-                            <p class="master__role">Парикмахер-стилист</p>
-                            <p class="master__desc">Творит чудеса с волосами. Окрашивание, стрижки, укладки — всегда по записи.</p>
+                    <div class="master-card">
+                        <div class="master-card__image">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=400&fit=crop" alt="Мария Петрова">
                         </div>
+                        <h3 class="master-card__name">Мария Петрова</h3>
+                        <p class="master-card__position">Косметолог</p>
+                    </div>
+                    <div class="master-card">
+                        <div class="master-card__image">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=400&fit=crop" alt="Елена Сидорова">
+                        </div>
+                        <h3 class="master-card__name">Елена Сидорова</h3>
+                        <p class="master-card__position">Визажист</p>
+                    </div>
+                    <div class="master-card">
+                        <div class="master-card__image">
+                            <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=300&h=400&fit=crop" alt="Ольга Козлова">
+                        </div>
+                        <h3 class="master-card__name">Ольга Козлова</h3>
+                        <p class="master-card__position">Мастер маникюра</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="reviews" id="reviews">
+        <section class="prices" id="prices">
             <div class="container">
-                <div class="reviews__header">
-                    <p class="reviews__number">04</p>
-                    <h2 class="reviews__title">Отзывы</h2>
-                </div>
-                <div class="reviews__slider" id="reviewsSlider">
-                    <div class="reviews__track">
-                        <div class="review">
-                            <p class="review__text">«Хочу сказать, что я нашёл хороший салон — называется он Фамилия. Мне предоставили услуги маникюр и педикюр, мастера зовут Наталья! Она очень хороший, внимательный и доброжелательный сотрудник.»</p>
-                            <p class="review__author">Любер Дед</p>
-                        </div>
-                        <div class="review">
-                            <p class="review__text">«Счастью моему нет предела! Наконец-то нашла салон красоты, где меня совершенно устраивают атмосфера, мастера, ценовая политика, а главное — результат.»</p>
-                            <p class="review__author">Аля Дубовик</p>
-                        </div>
-                        <div class="review">
-                            <p class="review__text">«Лучший мастер @stasya.balashova. Творит чудеса с волосами. Правда, к ней всегда по записи.»</p>
-                            <p class="review__author">Алексей Мартынов</p>
-                        </div>
-                        <div class="review">
-                            <p class="review__text">«Хороший салон с относительно низкими ценами, стрижкой всегда доволен, советую для посещения.»</p>
-                            <p class="review__author">No Name</p>
-                        </div>
-                        <div class="review">
-                            <p class="review__text">«Лучший салон, лучшие мастера!»</p>
-                            <p class="review__author">Рамина Магомедова</p>
-                        </div>
+                <h2 class="section-title">Цены</h2>
+                <div class="prices__table">
+                    <div class="price-row">
+                        <span class="price-row__service">Стрижка женская</span>
+                        <span class="price-row__price">от 2 000 ₽</span>
                     </div>
-                    <div class="reviews__nav">
-                        <button class="reviews__btn" id="prevReview" aria-label="Предыдущий">←</button>
-                        <div class="reviews__dots" id="reviewDots"></div>
-                        <button class="reviews__btn" id="nextReview" aria-label="Следующий">→</button>
+                    <div class="price-row">
+                        <span class="price-row__service">Окрашивание волос</span>
+                        <span class="price-row__price">от 5 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-row__service">Маникюр</span>
+                        <span class="price-row__price">от 1 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-row__service">Педикюр</span>
+                        <span class="price-row__price">от 2 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-row__service">Макияж</span>
+                        <span class="price-row__price">от 3 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-row__service">Массаж</span>
+                        <span class="price-row__price">от 2 000 ₽</span>
                     </div>
                 </div>
             </div>
@@ -211,90 +330,64 @@
 
         <section class="booking" id="booking">
             <div class="container">
-                <div class="booking__layout">
-                    <div class="booking__left">
-                        <p class="booking__number">05</p>
-                        <h2 class="booking__title">Запишитесь<br>на визит</h2>
-                        <p class="booking__text">Оставьте заявку — мы перезвоним в течение 15 минут и подтвердим запись.</p>
-                        <a href="tel:+74999610545" class="booking__phone">8 (499) 961-05-45</a>
-                        <p class="booking__hours">Ежедневно с 10:00 до 22:00</p>
+                <h2 class="section-title">Записаться</h2>
+                <form class="booking__form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
                     </div>
-                    <form class="booking__form" id="bookingForm">
-                        <div class="form-field">
-                            <input type="text" id="name" name="name" placeholder=" " required>
-                            <label for="name">Ваше имя</label>
-                        </div>
-                        <div class="form-field">
-                            <input type="tel" id="phone" name="phone" placeholder=" " required>
-                            <label for="phone">Телефон</label>
-                        </div>
-                        <div class="form-field">
-                            <select id="service" name="service">
-                                <option value="" selected></option>
-                                <option>Маникюр</option>
-                                <option>Педикюр</option>
-                                <option>Стрижка</option>
-                                <option>Окрашивание</option>
-                                <option>Укладка</option>
-                                <option>Уход за волосами</option>
-                            </select>
-                            <label for="service">Услуга</label>
-                        </div>
-                        <div class="form-field">
-                            <input type="date" id="date" name="date">
-                            <label for="date">Дата</label>
-                        </div>
-                        <button type="submit" class="booking__submit">
-                            <span>Отправить заявку</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <section class="contacts" id="contacts">
-            <div class="container">
-                <div class="contacts__header">
-                    <p class="contacts__number">06</p>
-                    <h2 class="contacts__title">Контакты</h2>
-                </div>
-                <div class="contacts__grid">
-                    <div class="contacts__info">
-                        <div class="contact-block">
-                            <h3>Адрес</h3>
-                            <p>Сосновая ул., 1к3<br>Котельники, Московская обл., 140055</p>
-                        </div>
-                        <div class="contact-block">
-                            <h3>Телефон</h3>
-                            <p><a href="tel:+74999610545">8 (499) 961-05-45</a></p>
-                        </div>
-                        <div class="contact-block">
-                            <h3>Часы работы</h3>
-                            <p>Ежедневно: 10:00 — 22:00</p>
-                        </div>
-                        <div class="contact-block">
-                            <h3>Удобства</h3>
-                            <p>Туалет · Wi-Fi · NFC-оплата</p>
-                        </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Телефон" required>
                     </div>
-                    <div class="contacts__map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.5!2d37.86!3d55.67!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQwJzEyLjAiTiAzN8KwNTEnMzYuMCJF!5e0!3m2!1sru!2sru!4v1" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Выберите услугу</option>
+                            <option value="hair">Парикмахерские услуги</option>
+                            <option value="nail">Маникюр и педикюр</option>
+                            <option value="makeup">Визаж</option>
+                            <option value="cosmetology">Косметология</option>
+                            <option value="massage">Массаж</option>
+                        </select>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <input type="date" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Отправить</button>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
-            <div class="footer__inner">
-                <span class="footer__logo">Familia</span>
-                <p class="footer__copy">© 2026 Салон красоты Familia</p>
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__title">Beauty Studio</h3>
+                    <p class="footer__text">Салон красоты в центре города</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__subtitle">Контакты</h4>
+                    <p class="footer__text">+7 499 123-45-67</p>
+                    <p class="footer__text">info@beauty-studio.ru</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__subtitle">Адрес</h4>
+                    <p class="footer__text">ул. Примерная, д. 1</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__subtitle">Соцсети</h4>
+                    <div class="footer__social">
+                        <a href="#" class="social-link">Telegram</a>
+                        <a href="#" class="social-link">WhatsApp</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 Beauty Studio. Все права защищены.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
