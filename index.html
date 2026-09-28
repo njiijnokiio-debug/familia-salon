@@ -3,36 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty Studio — Салон красоты</title>
+    <title>Evoker — Natural Beauty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
-                <a href="#" class="logo">
-                    <span class="logo__text">Beauty Studio</span>
-                </a>
+                <a href="#" class="logo">Evoker</a>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li><a href="#salons">Салоны</a></li>
                         <li><a href="#about">О нас</a></li>
                         <li><a href="#services">Услуги</a></li>
-                        <li><a href="#prices">Цены</a></li>
-                        <li><a href="#masters">Мастера</a></li>
+                        <li><a href="#team">Команда</a></li>
+                        <li><a href="#gallery">Галерея</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
-                <div class="header__contacts">
+                <div class="header__cta">
                     <a href="tel:+74991234567" class="header__phone">+7 499 123-45-67</a>
-                    <div class="header__social">
-                        <a href="#" class="social-link">Telegram</a>
-                        <a href="#" class="social-link">WhatsApp</a>
-                    </div>
                 </div>
                 <button class="burger" aria-label="Меню">
-                    <span></span>
                     <span></span>
                     <span></span>
                 </button>
@@ -42,317 +36,223 @@
 
     <main>
         <section class="hero">
+            <div class="hero__bg">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&h=1600&fit=crop" alt="Салон красоты">
+            </div>
             <div class="container">
                 <div class="hero__content">
-                    <h1 class="hero__title">Салон красоты<br>Beauty Studio</h1>
-                    <p class="hero__subtitle">Ваша красота — наша миссия. Мы внимательно относимся к каждому клиенту, обеспечивая высокое качество услуг и индивидуальный подход</p>
-                    <a href="#booking" class="btn btn--primary">Записаться</a>
+                    <p class="hero__subtitle">Natural Beauty Studio</p>
+                    <h1 class="hero__title">Красота,<br>рождённая<br>природой</h1>
+                    <p class="hero__text">Мы верим, что настоящая красота начинается с заботы о себе. Натуральные средства, индивидуальный подход и внимание к деталям — философия нашего салона.</p>
+                    <div class="hero__actions">
+                        <a href="#booking" class="btn">Записаться</a>
+                        <a href="#services" class="btn btn--solid">Услуги</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__scroll">
+                <span>Листайте</span>
+                <div class="hero__scroll-line"></div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__image reveal">
+                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&h=1000&fit=crop" alt="О салоне">
+                    </div>
+                    <div class="about__content reveal">
+                        <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+                            <p class="section-header__subtitle">О нас</p>
+                            <h2 class="section-header__title" style="font-size: 42px;">Место, где красота встречается с гармонией</h2>
+                        </div>
+                        <p class="about__text">Evoker — это больше, чем салон красоты. Это пространство, созданное для тех, кто ценит качество, натуральность и профессионализм. Наши мастера используют только экологичные средства и работают с каждым клиентом индивидуально.</p>
+                        <p class="about__text">Мы убеждены, что красота не должна быть сложной. Она должна быть естественной, доступной и приятной. Именно поэтому мы создали атмосферу, в которой каждый чувствует себя особенным.</p>
+                        <div class="about__stats">
+                            <div class="stat">
+                                <div class="stat__number">8+</div>
+                                <div class="stat__label">Лет опыта</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat__number">15</div>
+                                <div class="stat__label">Мастеров</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat__number">5000+</div>
+                                <div class="stat__label">Клиентов</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="services" id="services">
             <div class="container">
-                <h2 class="section-title">Услуги</h2>
-                <p class="section-subtitle">Всего категорий: 6</p>
+                <div class="section-header reveal">
+                    <p class="section-header__subtitle">Услуги</p>
+                    <h2 class="section-header__title">Что мы предлагаем</h2>
+                </div>
                 <div class="services__grid">
-                    <div class="service-card">
+                    <div class="service-card reveal">
                         <div class="service-card__image">
-                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=500&fit=crop" alt="Парикмахерский зал">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=700&fit=crop" alt="Парикмахерские услуги">
                         </div>
-                        <h3 class="service-card__title">Парикмахерский зал</h3>
-                        <ul class="service-card__list">
-                            <li>Мелирование волос</li>
-                            <li>Окрашивание волос</li>
-                            <li>Стрижка волос</li>
-                            <li>Прически и укладки</li>
-                        </ul>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Парикмахерия</h3>
+                            <p class="service-card__desc">Стрижки, окрашивание, уход и укладки. Создаём образы, подчёркивающие вашу индивидуальность.</p>
+                            <a href="#booking" class="service-card__link">Подробнее →</a>
+                        </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card reveal">
                         <div class="service-card__image">
-                            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=500&fit=crop" alt="Маникюр и педикюр">
+                            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&h=700&fit=crop" alt="Ногтевой сервис">
                         </div>
-                        <h3 class="service-card__title">Маникюр и педикюр</h3>
-                        <ul class="service-card__list">
-                            <li>Услуги маникюра</li>
-                            <li>Виды педикюра</li>
-                            <li>Наращивание ногтей</li>
-                            <li>Покрытия для ногтей</li>
-                        </ul>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Ногтевой сервис</h3>
+                            <p class="service-card__desc">Маникюр, педикюр, наращивание и дизайн. Идеальные ногти с использованием безопасных материалов.</p>
+                            <a href="#booking" class="service-card__link">Подробнее →</a>
+                        </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card reveal">
                         <div class="service-card__image">
-                            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=500&fit=crop" alt="Визаж">
+                            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&h=700&fit=crop" alt="Визаж">
                         </div>
-                        <h3 class="service-card__title">Визаж</h3>
-                        <ul class="service-card__list">
-                            <li>Брови и ресницы</li>
-                            <li>Макияж</li>
-                        </ul>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Визаж</h3>
+                            <p class="service-card__desc">Дневной, вечерний, свадебный макияж. Подчёркиваем вашу естественную красоту.</p>
+                            <a href="#booking" class="service-card__link">Подробнее →</a>
+                        </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card reveal">
                         <div class="service-card__image">
-                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=500&fit=crop" alt="Косметология">
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&h=700&fit=crop" alt="Косметология">
                         </div>
-                        <h3 class="service-card__title">Косметология</h3>
-                        <ul class="service-card__list">
-                            <li>Эстетическая косметология</li>
-                            <li>Аппаратная косметология</li>
-                            <li>Инъекционная косметология</li>
-                        </ul>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Косметология</h3>
+                            <p class="service-card__desc">Уход за кожей лица и тела. Омолаживающие и восстанавливающие процедуры с натуральными составами.</p>
+                            <a href="#booking" class="service-card__link">Подробнее →</a>
+                        </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card reveal">
                         <div class="service-card__image">
-                            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=500&fit=crop" alt="Массаж">
+                            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=700&fit=crop" alt="Массаж">
                         </div>
-                        <h3 class="service-card__title">Массаж</h3>
-                        <ul class="service-card__list">
-                            <li>Массаж для тела</li>
-                            <li>Прессотерапия</li>
-                            <li>Обёртывания</li>
-                        </ul>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Массаж</h3>
+                            <p class="service-card__desc">Расслабляющие и лечебные техники массажа. Восстановите баланс тела и разума.</p>
+                            <a href="#booking" class="service-card__link">Подробнее →</a>
+                        </div>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card reveal">
                         <div class="service-card__image">
-                            <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=400&h=500&fit=crop" alt="Услуги на дому">
+                            <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=600&h=700&fit=crop" alt="Брови и ресницы">
                         </div>
-                        <h3 class="service-card__title">Услуги на дому</h3>
-                        <ul class="service-card__list">
-                            <li>Парикмахерские услуги</li>
-                            <li>Ногтевой сервис</li>
-                            <li>Визаж</li>
-                            <li>Массаж</li>
-                        </ul>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Брови и ресницы</h3>
+                            <p class="service-card__desc">Коррекция, окрашивание, ламинирование и наращивание. Выразительный взгляд без макияжа.</p>
+                            <a href="#booking" class="service-card__link">Подробнее →</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="advantages" id="about">
+        <section class="gallery" id="gallery">
             <div class="container">
-                <h2 class="section-title">Преимущества</h2>
-                <p class="section-subtitle">Мы создаем атмосферу уюта и заботы</p>
-                <div class="advantages__grid">
-                    <div class="advantage-card">
-                        <div class="advantage-card__image">
-                            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=400&h=300&fit=crop" alt="Стиль">
-                        </div>
-                        <h3 class="advantage-card__title">Стиль</h3>
-                        <p class="advantage-card__text">Подчеркиваем вашу индивидуальность и красоту</p>
+                <div class="section-header reveal">
+                    <p class="section-header__subtitle">Галерея</p>
+                    <h2 class="section-header__title">Наши работы</h2>
+                </div>
+                <div class="gallery__grid">
+                    <div class="gallery__item reveal">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&h=1000&fit=crop" alt="Работа 1">
                     </div>
-                    <div class="advantage-card">
-                        <div class="advantage-card__image">
-                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop" alt="Интерьер">
-                        </div>
-                        <h3 class="advantage-card__title">Интерьер</h3>
-                        <p class="advantage-card__text">Уютные и элегантные пространства</p>
+                    <div class="gallery__item reveal">
+                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=600&h=600&fit=crop" alt="Работа 2">
                     </div>
-                    <div class="advantage-card">
-                        <div class="advantage-card__image">
-                            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&h=300&fit=crop" alt="Мастера">
-                        </div>
-                        <h3 class="advantage-card__title">Мастера</h3>
-                        <p class="advantage-card__text">Профессионалы своего дела</p>
+                    <div class="gallery__item reveal">
+                        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&h=600&fit=crop" alt="Работа 3">
                     </div>
-                    <div class="advantage-card">
-                        <div class="advantage-card__image">
-                            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&h=300&fit=crop" alt="Опыт">
-                        </div>
-                        <h3 class="advantage-card__title">10+ лет опыта</h3>
-                        <p class="advantage-card__text">Богатый опыт в сфере красоты</p>
+                    <div class="gallery__item reveal">
+                        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&h=600&fit=crop" alt="Работа 4">
                     </div>
-                    <div class="advantage-card">
-                        <div class="advantage-card__image">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop" alt="Филиалы">
-                        </div>
-                        <h3 class="advantage-card__title">5 филиалов</h3>
-                        <p class="advantage-card__text">Удобное расположение по всему городу</p>
+                    <div class="gallery__item reveal">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&h=600&fit=crop" alt="Работа 5">
+                    </div>
+                    <div class="gallery__item reveal">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=600&fit=crop" alt="Работа 6">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="salons" id="salons">
+        <section class="team" id="team">
             <div class="container">
-                <h2 class="section-title">Салоны</h2>
-                <p class="section-subtitle">Всего: 5</p>
-                <div class="salons__grid">
-                    <div class="salon-card">
-                        <div class="salon-card__image">
-                            <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&h=300&fit=crop" alt="Центр">
+                <div class="section-header reveal">
+                    <p class="section-header__subtitle">Команда</p>
+                    <h2 class="section-header__title">Наши мастера</h2>
+                </div>
+                <div class="team__grid">
+                    <div class="team-card reveal">
+                        <div class="team-card__image">
+                            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&h=500&fit=crop" alt="Анна Иванова">
                         </div>
-                        <h3 class="salon-card__title">Центр</h3>
-                        <p class="salon-card__address">ул. Примерная, д. 1</p>
+                        <h3 class="team-card__name">Анна Иванова</h3>
+                        <p class="team-card__role">Топ-стилист</p>
                     </div>
-                    <div class="salon-card">
-                        <div class="salon-card__image">
-                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop" alt="Север">
+                    <div class="team-card reveal">
+                        <div class="team-card__image">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop" alt="Мария Петрова">
                         </div>
-                        <h3 class="salon-card__title">Север</h3>
-                        <p class="salon-card__address">пр. Северный, д. 10</p>
+                        <h3 class="team-card__name">Мария Петрова</h3>
+                        <p class="team-card__role">Косметолог</p>
                     </div>
-                    <div class="salon-card">
-                        <div class="salon-card__image">
-                            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=400&h=300&fit=crop" alt="Юг">
+                    <div class="team-card reveal">
+                        <div class="team-card__image">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop" alt="Елена Сидорова">
                         </div>
-                        <h3 class="salon-card__title">Юг</h3>
-                        <p class="salon-card__address">ул. Южная, д. 20</p>
+                        <h3 class="team-card__name">Елена Сидорова</h3>
+                        <p class="team-card__role">Визажист</p>
                     </div>
-                    <div class="salon-card">
-                        <div class="salon-card__image">
-                            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&h=300&fit=crop" alt="Восток">
+                    <div class="team-card reveal">
+                        <div class="team-card__image">
+                            <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=500&fit=crop" alt="Ольга Козлова">
                         </div>
-                        <h3 class="salon-card__title">Восток</h3>
-                        <p class="salon-card__address">ул. Восточная, д. 30</p>
-                    </div>
-                    <div class="salon-card">
-                        <div class="salon-card__image">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop" alt="Запад">
-                        </div>
-                        <h3 class="salon-card__title">Запад</h3>
-                        <p class="salon-card__address">ул. Западная, д. 40</p>
+                        <h3 class="team-card__name">Ольга Козлова</h3>
+                        <p class="team-card__role">Мастер маникюра</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="reviews">
+        <section class="testimonials">
             <div class="container">
-                <h2 class="section-title">Отзывы</h2>
-                <div class="reviews__slider">
-                    <div class="review-card">
-                        <div class="review-card__header">
-                            <div class="review-card__avatar">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Анна">
-                            </div>
-                            <div class="review-card__info">
-                                <h4 class="review-card__name">Анна</h4>
-                                <span class="review-card__date">15.09.2024</span>
-                            </div>
-                        </div>
-                        <p class="review-card__text">Прекрасный салон! Очень внимательные мастера, всегда подскажут и помогут. Рекомендую!</p>
+                <div class="section-header reveal">
+                    <p class="section-header__subtitle">Отзывы</p>
+                    <h2 class="section-header__title">Что говорят клиенты</h2>
+                </div>
+                <div class="testimonials__slider reveal">
+                    <div class="testimonial">
+                        <div class="testimonial__stars">★★★★★</div>
+                        <p class="testimonial__quote">"Невероятный салон! Мастера настоящие профессионалы. Каждый раз ухожу с чувством абсолютного удовольствия. Атмосфера, качество, результат — всё на высшем уровне."</p>
+                        <p class="testimonial__author">Анна К.</p>
                     </div>
-                    <div class="review-card">
-                        <div class="review-card__header">
-                            <div class="review-card__avatar">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Мария">
-                            </div>
-                            <div class="review-card__info">
-                                <h4 class="review-card__name">Мария</h4>
-                                <span class="review-card__date">10.09.2024</span>
-                            </div>
-                        </div>
-                        <p class="review-card__text">Лучший салон в городе! Всегда идеальный результат и приятная атмосфера.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-card__header">
-                            <div class="review-card__avatar">
-                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="Елена">
-                            </div>
-                            <div class="review-card__info">
-                                <h4 class="review-card__name">Елена</h4>
-                                <span class="review-card__date">05.09.2024</span>
-                            </div>
-                        </div>
-                        <p class="review-card__text">Хожу сюда уже год и ни разу не разочаровалась. Спасибо мастерам!</p>
+                    <div class="testimonials__nav">
+                        <span class="testimonials__dot active"></span>
+                        <span class="testimonials__dot"></span>
+                        <span class="testimonials__dot"></span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="masters" id="masters">
+        <section class="cta" id="booking">
             <div class="container">
-                <h2 class="section-title">Мастера</h2>
-                <div class="masters__grid">
-                    <div class="master-card">
-                        <div class="master-card__image">
-                            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=300&h=400&fit=crop" alt="Анна Иванова">
-                        </div>
-                        <h3 class="master-card__name">Анна Иванова</h3>
-                        <p class="master-card__position">Топ-стилист</p>
-                    </div>
-                    <div class="master-card">
-                        <div class="master-card__image">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=400&fit=crop" alt="Мария Петрова">
-                        </div>
-                        <h3 class="master-card__name">Мария Петрова</h3>
-                        <p class="master-card__position">Косметолог</p>
-                    </div>
-                    <div class="master-card">
-                        <div class="master-card__image">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=400&fit=crop" alt="Елена Сидорова">
-                        </div>
-                        <h3 class="master-card__name">Елена Сидорова</h3>
-                        <p class="master-card__position">Визажист</p>
-                    </div>
-                    <div class="master-card">
-                        <div class="master-card__image">
-                            <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=300&h=400&fit=crop" alt="Ольга Козлова">
-                        </div>
-                        <h3 class="master-card__name">Ольга Козлова</h3>
-                        <p class="master-card__position">Мастер маникюра</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="prices" id="prices">
-            <div class="container">
-                <h2 class="section-title">Цены</h2>
-                <div class="prices__table">
-                    <div class="price-row">
-                        <span class="price-row__service">Стрижка женская</span>
-                        <span class="price-row__price">от 2 000 ₽</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-row__service">Окрашивание волос</span>
-                        <span class="price-row__price">от 5 000 ₽</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-row__service">Маникюр</span>
-                        <span class="price-row__price">от 1 500 ₽</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-row__service">Педикюр</span>
-                        <span class="price-row__price">от 2 500 ₽</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-row__service">Макияж</span>
-                        <span class="price-row__price">от 3 000 ₽</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price-row__service">Массаж</span>
-                        <span class="price-row__price">от 2 000 ₽</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="booking" id="booking">
-            <div class="container">
-                <h2 class="section-title">Записаться</h2>
-                <form class="booking__form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Ваше имя" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Телефон" required>
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="">Выберите услугу</option>
-                            <option value="hair">Парикмахерские услуги</option>
-                            <option value="nail">Маникюр и педикюр</option>
-                            <option value="makeup">Визаж</option>
-                            <option value="cosmetology">Косметология</option>
-                            <option value="massage">Массаж</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="date" required>
-                    </div>
-                    <button type="submit" class="btn btn--primary">Отправить</button>
-                </form>
+                <h2 class="cta__title reveal">Запишитесь на визит</h2>
+                <p class="cta__text reveal">Оставьте заявку, и мы свяжемся с вами для удобного времени. Первая консультация — бесплатно.</p>
+                <a href="tel:+74991234567" class="btn reveal">Позвонить</a>
             </div>
         </section>
     </main>
@@ -361,29 +261,37 @@
         <div class="container">
             <div class="footer__grid">
                 <div class="footer__col">
-                    <h3 class="footer__title">Beauty Studio</h3>
-                    <p class="footer__text">Салон красоты в центре города</p>
+                    <div class="footer__brand">Evoker</div>
+                    <p class="footer__text">Салон натуральной красоты. Забота о вас с 2016 года.</p>
                 </div>
                 <div class="footer__col">
-                    <h4 class="footer__subtitle">Контакты</h4>
-                    <p class="footer__text">+7 499 123-45-67</p>
-                    <p class="footer__text">info@beauty-studio.ru</p>
+                    <h4 class="footer__title">Навигация</h4>
+                    <ul class="footer__list">
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#team">Команда</a></li>
+                        <li><a href="#gallery">Галерея</a></li>
+                    </ul>
                 </div>
                 <div class="footer__col">
-                    <h4 class="footer__subtitle">Адрес</h4>
-                    <p class="footer__text">ул. Примерная, д. 1</p>
+                    <h4 class="footer__title">Контакты</h4>
+                    <ul class="footer__list">
+                        <li><a href="tel:+74991234567">+7 499 123-45-67</a></li>
+                        <li><a href="mailto:info@evoker.ru">info@evoker.ru</a></li>
+                        <li><a href="#">Москва, ул. Примерная, 1</a></li>
+                    </ul>
                 </div>
                 <div class="footer__col">
-                    <h4 class="footer__subtitle">Соцсети</h4>
+                    <h4 class="footer__title">Соцсети</h4>
                     <div class="footer__social">
-                        <a href="#" class="social-link">Telegram</a>
-                        <a href="#" class="social-link">WhatsApp</a>
-                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Telegram</a>
+                        <a href="#">WhatsApp</a>
                     </div>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p>&copy; 2024 Beauty Studio. Все права защищены.</p>
+                <p>&copy; 2024 Evoker. Все права защищены.</p>
             </div>
         </div>
     </footer>
