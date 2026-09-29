@@ -497,7 +497,7 @@ ul {
 }
 
 .brands {
-    padding: 40px 0 110px;
+    padding: 0 0 40px;
 }
 
 .brands__label {
@@ -506,75 +506,6 @@ ul {
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--text-light);
-    margin-bottom: 44px;
-}
-
-.brands__row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 64px;
-    flex-wrap: wrap;
-}
-
-.brands__item {
-    font-family: var(--font-serif);
-    font-size: 26px;
-    letter-spacing: 0.06em;
-    color: #b3a898;
-    transition: color 0.35s var(--ease);
-    cursor: default;
-}
-
-.brands__item:hover {
-    color: var(--green);
-}
-
-.promo {
-    background: var(--green);
-    color: var(--white);
-    padding: 110px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.promo::before {
-    content: '';
-    position: absolute;
-    top: -120px;
-    right: -120px;
-    width: 380px;
-    height: 380px;
-    border-radius: 50%;
-    background: rgba(201, 160, 160, 0.12);
-}
-
-.promo__grid {
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 90px;
-    align-items: center;
-    position: relative;
-}
-
-.promo__media img {
-    width: 100%;
-    height: 460px;
-    object-fit: cover;
-}
-
-.promo__title {
-    font-size: 42px;
-    line-height: 1.25;
-    margin-bottom: 26px;
-    color: var(--white);
-}
-
-.promo__text {
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 42px;
-    max-width: 480px;
 }
 
 .offers {
@@ -1061,15 +992,6 @@ ul {
         margin: 0 auto;
     }
 
-    .promo__grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
-    .promo__title {
-        font-size: 32px;
-    }
-
     .offers__grid {
         grid-template-columns: 1fr;
     }
@@ -1146,23 +1068,7 @@ ul {
     }
 
     .brands {
-        padding: 20px 0 80px;
-    }
-
-    .brands__row {
-        gap: 30px 40px;
-    }
-
-    .brands__item {
-        font-size: 21px;
-    }
-
-    .promo {
-        padding: 80px 0;
-    }
-
-    .promo__media img {
-        height: 300px;
+        padding: 0 0 20px;
     }
 
     .works__grid {
