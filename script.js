@@ -1,34 +1,60 @@
 const header = document.getElementById('header');
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav');
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileBook = document.getElementById('mobileBook');
+const heroImg = document.getElementById('heroImg');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+const onScroll = () => {
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 40);
+    mobileBook.classList.toggle('visible', y > window.innerHeight * 0.6);
+};
+
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
 burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    burger.classList.toggle('active');
+    const open = mobileMenu.classList.toggle('open');
+    burger.classList.toggle('active', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
 });
 
-const revealElements = document.querySelectorAll('.reveal');
+mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        burger.classList.remove('active');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    });
+});
 
-const revealObserver = new IntersectionObserver((entries) => {
+let ticking = false;
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            if (heroImg && window.scrollY < window.innerHeight) {
+                heroImg.style.transform = `translateY(${window.scrollY * 0.18}px) scale(1.05)`;
+            }
+            ticking = false;
+        });
+        ticking = true;
+    }
+}, { passive: true });
+
+const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
         }
     });
 }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
 });
 
-revealElements.forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 const track = document.getElementById('testimonialsTrack');
 const slides = track.children;
@@ -48,28 +74,43 @@ for (let i = 0; i < slides.length; i++) {
 const dots = dotsContainer.children;
 
 function goToSlide(index) {
-    if (index < 0) index = slides.length - 1;
-    if (index >= slides.length) index = 0;
-    currentSlide = index;
+    currentSlide = (index + slides.length) % slides.length;
     track.style.transform = `translateX(-${currentSlide * 100}%)`;
     for (let i = 0; i < dots.length; i++) {
-        dots[i].classList.remove('active');
+        dots[i].classList.toggle('active', i === currentSlide);
     }
-    dots[currentSlide].classList.add('active');
 }
 
 prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
 nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
 
+let autoTimer = setInterval(() => goToSlide(currentSlide + 1), 6000);
+track.parentElement.addEventListener('mouseenter', () => clearInterval(autoTimer));
+track.parentElement.addEventListener('mouseleave', () => {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => goToSlide(currentSlide + 1), 6000);
+});
+
+let touchStartX = 0;
+track.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+}, { passive: true });
+
+track.addEventListener('touchend', e => {
+    const diff = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(diff) > 50) {
+        goToSlide(currentSlide + (diff < 0 ? 1 : -1));
+    }
+}, { passive: true });
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
+        const id = this.getAttribute('href');
+        if (id.length < 2) return;
+        const target = document.querySelector(id);
+        if (!target) return;
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+        const top = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
     });
 });

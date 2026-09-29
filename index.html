@@ -3,30 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praid Beauty — Студия красоты в Мытищах</title>
+    <title>Praid Beauty — Студия красоты в Мытищах | Маникюр, наращивание, макияж</title>
+    <meta name="description" content="Praid Beauty — студия красоты в Мытищах. Маникюр, педикюр, наращивание ногтей и ресниц, макияж, укладки и перманентный макияж бровей. Ежедневно с 10:00 до 22:00. Запись по телефону +7 (984) 333-37-37.">
+    <meta name="keywords" content="студия красоты мытищи, маникюр мытищи, наращивание ногтей, наращивание ресниц, макияж, перманентный макияж бровей, Praid Beauty">
+    <meta property="og:title" content="Praid Beauty — Студия красоты в Мытищах">
+    <meta property="og:description" content="Маникюр, педикюр, наращивание ногтей и ресниц, макияж, укладки и перманентный макияж бровей. Ежедневно с 10:00 до 22:00.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/hero.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="icon" type="image/svg+xml" href="assets/hero.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Praid Beauty",
+        "description": "Студия красоты в Мытищах. Маникюр, педикюр, наращивание ногтей и ресниц, макияж, укладки и перманентный макияж бровей.",
+        "telephone": "+7 (984) 333-37-37",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Осташковское шоссе, 22, корп. 3",
+            "addressLocality": "Мытищи",
+            "addressCountry": "RU"
+        },
+        "openingHours": "Mo-Su 10:00-22:00",
+        "priceRange": "₽₽"
+    }
+    </script>
 </head>
 <body>
+    <div class="topbar">
+        <div class="container topbar__inner">
+            <span>Ежедневно с 10:00 до 22:00</span>
+            <span>Осташковское шоссе, 22, корп. 3, Мытищи</span>
+        </div>
+    </div>
+
     <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
-                <a href="#" class="logo">Praid Beauty</a>
-                <nav class="nav">
+                <a href="#" class="logo">Praid&nbsp;Beauty</a>
+                <nav class="nav" id="nav">
                     <ul class="nav__list">
                         <li><a href="#about">О нас</a></li>
                         <li><a href="#services">Услуги</a></li>
                         <li><a href="#prices">Цены</a></li>
-                        <li><a href="#gallery">Галерея</a></li>
+                        <li><a href="#works">Работы</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="header__cta">
                     <a href="tel:+79843333737" class="header__phone">+7 (984) 333-37-37</a>
+                    <a href="tel:+79843333737" class="btn btn--dark btn--sm header__book">Записаться</a>
                 </div>
-                <button class="burger" aria-label="Меню">
+                <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
                     <span></span>
                     <span></span>
                 </button>
@@ -34,125 +67,187 @@
         </div>
     </header>
 
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-menu__nav">
+            <a href="#about">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#prices">Цены</a>
+            <a href="#works">Работы</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+        <a href="tel:+79843333737" class="btn btn--dark mobile-menu__cta">Записаться</a>
+        <a href="tel:+79843333737" class="mobile-menu__phone">+7 (984) 333-37-37</a>
+    </div>
+
     <main>
         <section class="hero">
-            <div class="hero__bg">
-                <img src="https://avatars.mds.yandex.net/get-altay/9709783/2a00000189720505ee9f8bf234c92d121a18/XXL_height" alt="Салон красоты Praid Beauty">
-            </div>
-            <div class="container">
+            <div class="container hero__grid">
+                <div class="hero__media">
+                    <img src="assets/hero.jpg" alt="Praid Beauty — студия красоты" class="hero__img" id="heroImg">
+                    <span class="hero__badge">салон<br>красоты</span>
+                </div>
                 <div class="hero__content">
-                    <p class="hero__subtitle">Студия красоты · Мытищи</p>
-                    <h1 class="hero__title">Praid Beauty</h1>
-                    <p class="hero__text">Маникюр, педикюр, наращивание ногтей и ресниц, макияж, укладки и перманентный макияж бровей. Работаем ежедневно с 10:00 до 22:00.</p>
+                    <p class="hero__eyebrow">Praid Beauty · Мытищи</p>
+                    <h1 class="hero__title">
+                        <span class="hero__title-line">Место</span>
+                        <span class="hero__title-line">красоты</span>
+                        <span class="hero__title-line hero__title-line--accent">ваших</span>
+                        <span class="hero__title-line">образов</span>
+                    </h1>
+                    <p class="hero__text">Маникюр, наращивание ногтей и ресниц, макияж, укладки и перманентный макияж бровей. Бережно заботимся о вашей красоте каждый день.</p>
                     <div class="hero__actions">
-                        <a href="tel:+79843333737" class="btn">Записаться</a>
-                        <a href="#services" class="btn btn--solid">Услуги</a>
+                        <a href="tel:+79843333737" class="btn btn--dark">Записаться</a>
+                        <a href="#services" class="btn btn--outline">Услуги</a>
                     </div>
                 </div>
             </div>
             <div class="hero__scroll">
-                <span>Листайте</span>
+                <span>листайте</span>
                 <div class="hero__scroll-line"></div>
-            </div>
-        </section>
-
-        <section class="about" id="about">
-            <div class="container">
-                <div class="about__grid">
-                    <div class="about__image reveal">
-                        <img src="https://avatars.mds.yandex.net/get-altay/14021027/2a000001938c92d4e6d120265a9adb400b93/XXXL" alt="О салоне Praid Beauty">
-                    </div>
-                    <div class="about__content reveal">
-                        <div class="section-header" style="text-align: left; margin-bottom: 30px;">
-                            <p class="section-header__subtitle">О нас</p>
-                            <h2 class="section-header__title" style="font-size: 42px;">Студия, которой доверяют</h2>
-                        </div>
-                        <p class="about__text">Praid Beauty — студия красоты в Мытищах. Мы делаем маникюр, педикюр, наращивание ногтей и ресниц, макияж, укладки волос и перманентный макияж бровей.</p>
-                        <p class="about__text">Нас ценят за аккуратность, внимание к деталям и уютную атмосферу. Клиенты отмечают профессионализм мастеров, стильный интерьер и вкусный кофе, которым всегда можно насладиться во время процедуры.</p>
-                        <div class="about__stats">
-                            <div class="stat">
-                                <div class="stat__number">4,9</div>
-                                <div class="stat__label">Рейтинг</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat__number">104</div>
-                                <div class="stat__label">Отзывов</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat__number">10:00–22:00</div>
-                                <div class="stat__label">Ежедневно</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section class="services" id="services">
             <div class="container">
-                <div class="section-header reveal">
-                    <p class="section-header__subtitle">Услуги</p>
-                    <h2 class="section-header__title">Что мы делаем</h2>
+                <div class="section-head reveal">
+                    <p class="section-head__eyebrow">Услуги</p>
+                    <h2 class="section-head__title">Мы бережно заботимся<br>о вашей красоте</h2>
                 </div>
                 <div class="services__grid">
-                    <div class="service-card reveal">
-                        <div class="service-card__image">
-                            <img src="https://avatars.mds.yandex.net/get-altay/7368569/2a0000018305a842077e99708bf29cc31c3c/XXXL" alt="Маникюр и педикюр">
+                    <article class="service-card reveal">
+                        <div class="service-card__media">
+                            <img src="assets/service-manicure.jpg" alt="Маникюр и педикюр" loading="lazy">
                         </div>
-                        <div class="service-card__content">
-                            <h3 class="service-card__title">Маникюр и педикюр</h3>
-                            <p class="service-card__desc">Классический и комплексный маникюр, smart-педикюр, укрепление гелем, френч, дизайн, стемпинг и градиент.</p>
-                            <a href="#prices" class="service-card__link">Цены →</a>
+                        <div class="service-card__body">
+                            <h3 class="service-card__title">Комплексный уход за ногтями</h3>
+                            <p class="service-card__desc">Маникюр, педикюр, укрепление гелем, френч и дизайн любой сложности.</p>
+                            <a href="#prices" class="service-card__link">Посмотреть цены</a>
                         </div>
+                    </article>
+                    <article class="service-card reveal">
+                        <div class="service-card__media">
+                            <img src="assets/service-nails.jpg" alt="Наращивание ногтей" loading="lazy">
+                        </div>
+                        <div class="service-card__body">
+                            <h3 class="service-card__title">Окрашивание любой сложности</h3>
+                            <p class="service-card__desc">Наращивание и коррекция любой длины и формы, арочный квадрат и дизайн.</p>
+                            <a href="#prices" class="service-card__link">Посмотреть цены</a>
+                        </div>
+                    </article>
+                    <article class="service-card reveal">
+                        <div class="service-card__media">
+                            <img src="assets/service-lashes.jpg" alt="Наращивание ресниц" loading="lazy">
+                        </div>
+                        <div class="service-card__body">
+                            <h3 class="service-card__title">Стрижка любой сложности</h3>
+                            <p class="service-card__desc">Укладки, локоны, выпрямление и полный образ с макияжем для любого события.</p>
+                            <a href="#prices" class="service-card__link">Посмотреть цены</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="brands">
+            <div class="container">
+                <p class="brands__label reveal">Работаем только с качественными брендами</p>
+                <div class="brands__row reveal">
+                    <span class="brands__item">davines</span>
+                    <span class="brands__item">KBNE</span>
+                    <span class="brands__item">L'ORÉAL</span>
+                    <span class="brands__item">OLLIN</span>
+                    <span class="brands__item">TIGI</span>
+                    <span class="brands__item">theact</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="promo">
+            <div class="container promo__grid">
+                <div class="promo__media reveal">
+                    <img src="assets/about.jpg" alt="Интерьер салона Praid Beauty" loading="lazy">
+                </div>
+                <div class="promo__content">
+                    <p class="section-head__eyebrow section-head__eyebrow--light">Акция месяца</p>
+                    <h2 class="promo__title">Каждому новому клиенту — скидка 15% на первую услугу по промокоду «Красота»</h2>
+                    <p class="promo__text">Подарок к любой услуге — вкусный кофе или чай на выбор. Наслаждайтесь атмосферой и профессиональным уходом.</p>
+                    <a href="tel:+79843333737" class="btn btn--light">Записаться</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="offers">
+            <div class="container offers__grid">
+                <article class="offer-card reveal">
+                    <div class="offer-card__media">
+                        <img src="assets/service-makeup.jpg" alt="Макияж" loading="lazy">
                     </div>
-                    <div class="service-card reveal">
-                        <div class="service-card__image">
-                            <img src="https://avatars.mds.yandex.net/get-altay/9916116/2a0000018972050a54657de54a4ae23c1654/XXXL" alt="Наращивание ногтей">
-                        </div>
-                        <div class="service-card__content">
-                            <h3 class="service-card__title">Наращивание ногтей</h3>
-                            <p class="service-card__desc">Наращивание и коррекция любой длины и формы. Арочный квадрат, разные объёмы и дизайн.</p>
-                            <a href="#prices" class="service-card__link">Цены →</a>
-                        </div>
+                    <div class="offer-card__body">
+                        <h3 class="offer-card__title">Плавные линии бровей с экспресс-уходом и стрижкой кончиков — 2000 руб.</h3>
+                        <a href="tel:+79843333737" class="btn btn--dark btn--sm">Записаться</a>
                     </div>
-                    <div class="service-card reveal">
-                        <div class="service-card__image">
-                            <img src="https://avatars.mds.yandex.net/get-altay/6950449/2a0000018305a7f3a2f532037094fc2b2d70/XXXL" alt="Макияж">
-                        </div>
-                        <div class="service-card__content">
-                            <h3 class="service-card__title">Макияж</h3>
-                            <p class="service-card__desc">Дневной, вечерний, свадебный и креативный макияж. Накладные ресницы и перманентный макияж бровей.</p>
-                            <a href="#prices" class="service-card__link">Цены →</a>
-                        </div>
+                </article>
+                <article class="offer-card reveal">
+                    <div class="offer-card__media">
+                        <img src="assets/service-hair.jpg" alt="Укладка волос" loading="lazy">
                     </div>
-                    <div class="service-card reveal">
-                        <div class="service-card__image">
-                            <img src="https://avatars.mds.yandex.net/get-altay/14209766/2a000001938c9326cc43204ad92909c1cd05/XXXL" alt="Укладка волос">
-                        </div>
-                        <div class="service-card__content">
-                            <h3 class="service-card__title">Укладка и образ</h3>
-                            <p class="service-card__desc">Локоны, волны, выпрямление и несложные причёски. Полный образ с макияжем для любого события.</p>
-                            <a href="#prices" class="service-card__link">Цены →</a>
-                        </div>
+                    <div class="offer-card__body">
+                        <h3 class="offer-card__title">Горячий комплект на любую длину и густоту волос — 3500 руб.</h3>
+                        <a href="tel:+79843333737" class="btn btn--dark btn--sm">Записаться</a>
                     </div>
-                    <div class="service-card reveal">
-                        <div class="service-card__image">
-                            <img src="https://avatars.mds.yandex.net/get-altay/5554141/2a0000018305a8073ba26bf421ce41b9eca6/XXXL" alt="Наращивание ресниц">
+                </article>
+            </div>
+        </section>
+
+        <section class="works" id="works">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="section-head__eyebrow">Портфолио</p>
+                    <h2 class="section-head__title">Наши работы</h2>
+                </div>
+                <div class="works__grid">
+                    <figure class="works__item works__item--big reveal">
+                        <img src="assets/gallery-1.jpg" alt="Работа мастера — маникюр" loading="lazy">
+                    </figure>
+                    <figure class="works__item reveal">
+                        <img src="assets/gallery-2.jpg" alt="Работа мастера — дизайн" loading="lazy">
+                    </figure>
+                    <figure class="works__item reveal">
+                        <img src="assets/gallery-3.jpg" alt="Работа мастера — ногти" loading="lazy">
+                    </figure>
+                    <figure class="works__item reveal">
+                        <img src="assets/gallery-4.jpg" alt="Работа мастера — педикюр" loading="lazy">
+                    </figure>
+                    <figure class="works__item reveal">
+                        <img src="assets/gallery-5.jpg" alt="Работа мастера — ресницы" loading="lazy">
+                    </figure>
+                    <figure class="works__item reveal">
+                        <img src="assets/gallery-6.jpg" alt="Работа мастера — макияж" loading="lazy">
+                    </figure>
+                    <figure class="works__item reveal">
+                        <img src="assets/service-brows.jpg" alt="Работа мастера — брови" loading="lazy">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="statement" id="about">
+            <div class="container">
+                <h2 class="statement__title reveal">Приумножаем<br>красоту наших<br>клиентов</h2>
+                <div class="statement__row reveal">
+                    <p class="statement__text">Praid Beauty — уютная студия красоты в Мытищах. Нас ценят за аккуратность, внимание к деталям и профессионализм мастеров.</p>
+                    <div class="statement__stats">
+                        <div class="stat">
+                            <span class="stat__number">4,9</span>
+                            <span class="stat__label">Рейтинг</span>
                         </div>
-                        <div class="service-card__content">
-                            <h3 class="service-card__title">Наращивание ресниц</h3>
-                            <p class="service-card__desc">Классика, объёмы 1,5–3, Голливуд, уголки. Эффекты: мокрый, лучики, цветные, изгибы M и L.</p>
-                            <a href="#prices" class="service-card__link">Цены →</a>
+                        <div class="stat">
+                            <span class="stat__number">104</span>
+                            <span class="stat__label">Отзывов</span>
                         </div>
-                    </div>
-                    <div class="service-card reveal">
-                        <div class="service-card__image">
-                            <img src="https://avatars.mds.yandex.net/get-altay/6950449/2a0000018305a8480fc69e8767d45263c4d4/XXXL" alt="Перманентный макияж">
-                        </div>
-                        <div class="service-card__content">
-                            <h3 class="service-card__title">Перманент бровей</h3>
-                            <p class="service-card__desc">Перманентный макияж бровей и коррекция. Естественный результат, который сохраняется надолго.</p>
-                            <a href="#prices" class="service-card__link">Цены →</a>
+                        <div class="stat">
+                            <span class="stat__number">10–22</span>
+                            <span class="stat__label">Ежедневно</span>
                         </div>
                     </div>
                 </div>
@@ -161,9 +256,9 @@
 
         <section class="prices" id="prices">
             <div class="container">
-                <div class="section-header reveal">
-                    <p class="section-header__subtitle">Цены</p>
-                    <h2 class="section-header__title">Стоимость услуг</h2>
+                <div class="section-head reveal">
+                    <p class="section-head__eyebrow">Цены</p>
+                    <h2 class="section-head__title">Стоимость услуг</h2>
                 </div>
                 <div class="prices__grid">
                     <div class="price-block reveal">
@@ -249,52 +344,17 @@
             </div>
         </section>
 
-        <section class="gallery" id="gallery">
-            <div class="container">
-                <div class="section-header reveal">
-                    <p class="section-header__subtitle">Галерея</p>
-                    <h2 class="section-header__title">Наши работы</h2>
-                </div>
-                <div class="gallery__grid">
-                    <div class="gallery__item reveal">
-                        <img src="https://avatars.mds.yandex.net/get-altay/9709783/2a00000189720505ee9f8bf234c92d121a18/XXL_height" alt="Маникюр">
-                    </div>
-                    <div class="gallery__item reveal">
-                        <img src="https://avatars.mds.yandex.net/get-altay/14021027/2a000001938c92d4e6d120265a9adb400b93/XXXL" alt="Эстетика">
-                    </div>
-                    <div class="gallery__item reveal">
-                        <img src="https://avatars.mds.yandex.net/get-altay/9916116/2a0000018972050a54657de54a4ae23c1654/XXXL" alt="Дизайн ногтей">
-                    </div>
-                    <div class="gallery__item reveal">
-                        <img src="https://avatars.mds.yandex.net/get-altay/6950449/2a0000018305a7f3a2f532037094fc2b2d70/XXXL" alt="Эстетика">
-                    </div>
-                    <div class="gallery__item reveal">
-                        <img src="https://avatars.mds.yandex.net/get-altay/5554141/2a0000018305a8073ba26bf421ce41b9eca6/XXXL" alt="Ногти">
-                    </div>
-                    <div class="gallery__item reveal">
-                        <img src="https://avatars.mds.yandex.net/get-altay/14209766/2a000001938c9326cc43204ad92909c1cd05/XXXL" alt="Эстетика">
-                    </div>
-                    <div class="gallery__item reveal">
-                        <img src="https://avatars.mds.yandex.net/get-altay/6950449/2a0000018305a8480fc69e8767d45263c4d4/XXXL" alt="Педикюр">
-                    </div>
-                    <div class="gallery__item reveal">
-                        <img src="https://avatars.mds.yandex.net/get-altay/7368569/2a0000018305a842077e99708bf29cc31c3c/XXXL" alt="Маникюр">
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="testimonials" id="testimonials">
             <div class="container">
-                <div class="section-header reveal">
-                    <p class="section-header__subtitle">Отзывы</p>
-                    <h2 class="section-header__title">Что говорят клиенты</h2>
+                <div class="section-head reveal">
+                    <p class="section-head__eyebrow">Отзывы</p>
+                    <h2 class="section-head__title">Что говорят клиенты</h2>
                 </div>
                 <div class="testimonials__slider reveal">
                     <div class="testimonials__track" id="testimonialsTrack">
                         <div class="testimonial-slide">
                             <div class="testimonial__stars">★★★★★</div>
-                            <p class="testimonial__quote">«Очень Рада, что в нашем ЖК есть такая студия. Любая работа делается на высшем уровне, весь персонал достаточно профессионален в своей деятельности.»</p>
+                            <p class="testimonial__quote">«Очень рада, что в нашем ЖК есть такая студия. Любая работа делается на высшем уровне, весь персонал достаточно профессионален в своей деятельности.»</p>
                             <p class="testimonial__author">Клиент Praid Beauty</p>
                         </div>
                         <div class="testimonial-slide">
@@ -329,9 +389,9 @@
                         </div>
                     </div>
                     <div class="testimonials__nav">
-                        <button class="testimonials__btn testimonials__btn--prev" id="prevBtn" aria-label="Предыдущий отзыв">←</button>
+                        <button class="testimonials__btn" id="prevBtn" aria-label="Предыдущий отзыв">←</button>
                         <div class="testimonials__dots" id="testimonialsDots"></div>
-                        <button class="testimonials__btn testimonials__btn--next" id="nextBtn" aria-label="Следующий отзыв">→</button>
+                        <button class="testimonials__btn" id="nextBtn" aria-label="Следующий отзыв">→</button>
                     </div>
                 </div>
             </div>
@@ -341,7 +401,7 @@
             <div class="container">
                 <h2 class="cta__title reveal">Запишитесь на визит</h2>
                 <p class="cta__text reveal">Позвоните нам или напишите в мессенджер — подберём удобное время и мастера.</p>
-                <a href="tel:+79843333737" class="btn reveal">Позвонить</a>
+                <a href="tel:+79843333737" class="btn btn--light reveal">Позвонить</a>
             </div>
         </section>
     </main>
@@ -359,7 +419,7 @@
                         <li><a href="#about">О нас</a></li>
                         <li><a href="#services">Услуги</a></li>
                         <li><a href="#prices">Цены</a></li>
-                        <li><a href="#gallery">Галерея</a></li>
+                        <li><a href="#works">Работы</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
@@ -383,6 +443,8 @@
             </div>
         </div>
     </footer>
+
+    <a href="tel:+79843333737" class="mobile-book" id="mobileBook">Записаться</a>
 
     <script src="script.js"></script>
 </body>
